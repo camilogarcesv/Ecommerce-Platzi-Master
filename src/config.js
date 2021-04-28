@@ -1,0 +1,1 @@
+export const apiUrl = 'https://my.api.mockaroo.com/ecommerce_api';
