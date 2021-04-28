@@ -50,10 +50,10 @@ const CartScreen = {
   render: async () => {
     const request = parseRequestUrl();
     if (request.id) {
-      //   const product = await getProduct(request.id);
-      const { products } = data;
+      const product = await getProduct(request.id);
+      // const { products } = data;
       //   const product = products.find((item) => item.id === request.id);
-      const product = products[request.id - 1];
+      // const product = products[request.id - 1];
       addToCart({
         product: product.id,
         name: `${product.car_make_name} ${product.car_model_name}`,
