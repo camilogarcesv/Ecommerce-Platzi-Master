@@ -5,23 +5,23 @@ import { hideLoading, parseRequestUrl, showLoading } from "../utils";
 const HomeScreen = {
   render: async () => {
     showLoading();
-    // const { products } = data;
-    const baseLink = "https://my.api.mockaroo.com/ecommerce_api";
-    const myHeaders = new Headers();
-    myHeaders.append("X-API-Key", "562af2c0");
-    myHeaders.append("Content-Type", "application/json");
+    const { products } = data;
+    // const baseLink = "https://my.api.mockaroo.com/ecommerce_api";
+    // const myHeaders = new Headers();
+    // myHeaders.append("X-API-Key", "562af2c0");
+    // myHeaders.append("Content-Type", "application/json");
 
-    const requestOptions = {
-      headers: myHeaders,
-    };
-    requestOptions.method = "GET";
-    const response = await fetch(baseLink, requestOptions);
-    if (!response || !response.ok) {
-      return `<div>
-                Error in getting data
-            </div>`;
-    }
-    const products = await response.json();
+    // const requestOptions = {
+    //   headers: myHeaders,
+    // };
+    // requestOptions.method = "GET";
+    // const response = await fetch(baseLink, requestOptions);
+    // if (!response || !response.ok) {
+    //   return `<div>
+    //             Error in getting data
+    //         </div>`;
+    // }
+    // const products = await response.json();
     hideLoading();
     return `
         <ul class="products">

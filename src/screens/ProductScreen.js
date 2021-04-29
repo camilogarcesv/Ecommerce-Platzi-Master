@@ -11,10 +11,10 @@ const ProductScreen = {
   },
   render: async () => {
     const request = parseRequestUrl();
-    // const { products } = data;
+    const { products } = data;
     showLoading();
-    // const product = products[request.id - 1];
-    const product = await getProduct(request.id);
+    const product = products[request.id - 1];
+    // const product = await getProduct(request.id);
 
     if (!product) {
       return `<div>Error, product not found</div>`;
